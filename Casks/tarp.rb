@@ -2,8 +2,7 @@ cask "tarp" do
   version "0.1.0"
   sha256 "ca6e6a7c3620996af679bdcd6bb8b0919f88b5ff2c689dbc2921602146895d9b"
 
-  url "https://github.com/ramsrib/tarp/releases/download/v#{version}/Tarp-macos-arm64.dmg",
-      verified: "github.com/ramsrib/tarp/"
+  url "https://github.com/ramsrib/tarp/releases/download/v#{version}/Tarp-macos-arm64.dmg"
   name "Tarp"
   desc "Plain, privacy-first terminal"
   homepage "https://github.com/ramsrib/tarp"
@@ -14,7 +13,7 @@ cask "tarp" do
   end
 
   depends_on arch: :arm64
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Tarp.app"
 
