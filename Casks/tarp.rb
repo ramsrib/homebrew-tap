@@ -1,6 +1,6 @@
 cask "tarp" do
-  version "0.1.0"
-  sha256 "ca6e6a7c3620996af679bdcd6bb8b0919f88b5ff2c689dbc2921602146895d9b"
+  version "0.1.1"
+  sha256 "c4117b70e2a0103d48a9a483af5c1acbdabb021de99fe1838082c37bd9988a52"
 
   url "https://github.com/ramsrib/tarp/releases/download/v#{version}/Tarp-macos-arm64.dmg"
   name "Tarp"
