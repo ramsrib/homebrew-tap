@@ -4,7 +4,7 @@ cask "temple" do
 
   url "https://github.com/ramsrib/temple/releases/download/v#{version}/Temple-v#{version}-arm64.dmg"
   name "Temple"
-  desc "Your CLI coding agents, as a chat app"
+  desc "Session manager for Claude Code and Codex"
   homepage "https://github.com/ramsrib/temple"
 
   livecheck do

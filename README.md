@@ -26,7 +26,7 @@ brew upgrade --cask temple
 
 | Cask | Description | Repo |
 |---|---|---|
-| `temple` | Your CLI coding agents (Claude Code, Codex), as a chat app — macOS, Apple Silicon | [ramsrib/temple](https://github.com/ramsrib/temple) |
+| `temple` | Session manager for Claude Code and Codex sessions — macOS, Apple Silicon | [ramsrib/temple](https://github.com/ramsrib/temple) |
 | `tarp` | A plain, privacy-first terminal (a fork of Warp) — macOS, Apple Silicon | [ramsrib/tarp](https://github.com/ramsrib/tarp) |
 
 Apps are signed with a Developer ID and notarized by Apple, so they install and
