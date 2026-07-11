@@ -4,7 +4,7 @@ cask "temple" do
 
   url "https://github.com/ramsrib/temple/releases/download/v#{version}/Temple-v#{version}-arm64.dmg"
   name "Temple"
-  desc "Session manager for Claude Code and Codex"
+  desc "IDE for your Claude Code and Codex agents"
   homepage "https://github.com/ramsrib/temple"
 
   livecheck do
