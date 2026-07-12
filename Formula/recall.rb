@@ -4,9 +4,10 @@ class Recall < Formula
   version "0.1.0"
   license "MIT"
 
-  # Semantic and hybrid search (the default) embed via a local Ollama, so it is
-  # a real dependency, not a suggestion. Lexical search works without it.
-  depends_on "ollama"
+  # Ollama is deliberately NOT a depends_on. Most people run it as Ollama.app
+  # (from ollama.com), and the formula would install a second copy — dragging in
+  # python + mlx — that competes with the app's server on :11434. Either install
+  # satisfies recall, so the caveats ask for one rather than forcing this one.
 
   on_macos do
     on_arm do
@@ -41,13 +42,15 @@ class Recall < Formula
 
   def caveats
     <<~EOS
-      recall embeds locally via Ollama. Start it and pull the embedding model:
+      recall embeds locally via Ollama. If you don't already have it, install it
+      either way — Ollama.app from https://ollama.com, or:
 
-        brew services start ollama
+        brew install ollama && brew services start ollama
+
+      Then pull the embedding model and build the index (the first index takes a
+      while — it reads every session you have):
+
         ollama pull qwen3-embedding:0.6b
-
-      Then build the index (first run takes a while — it reads every session):
-
         recall index
         recall "how did I fix that migration"
 
@@ -55,9 +58,9 @@ class Recall < Formula
 
         recall "migration" --mode lexical
 
-      The index lives at ~/.config/recall/index.db. `recall summary` sends
-      transcript text to the `codex` CLI, so it leaves your machine — see the
-      README's "Privacy & network behavior".
+      The index lives at ~/.config/recall/index.db. Note that `recall summary`
+      sends transcript text to the `codex` CLI, so that command does leave your
+      machine — see the README's "Privacy & network behavior".
     EOS
   end
 

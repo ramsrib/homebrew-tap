@@ -13,8 +13,9 @@ cask "recall-app" do
   end
 
   # The app is a front end for the recall CLI — it shells out to the `recall`
-  # binary for everything. Without it the app has nothing to show, so this is a
-  # hard dependency. recall in turn pulls in ollama.
+  # binary for everything, so without it the app has nothing to show. Ollama is
+  # left to the recall formula's caveats rather than forced as a dependency (see
+  # Formula/recall.rb for why).
   depends_on formula: "ramsrib/tap/recall"
   depends_on arch: :arm64
   depends_on macos: ">= :sonoma"
@@ -30,9 +31,11 @@ cask "recall-app" do
 
   caveats <<~EOS
     Recall App drives the `recall` CLI, which was installed alongside it.
-    Before first use, start Ollama, pull the embedding model, and index:
 
-      brew services start ollama
+    recall needs Ollama running to index. If you don't have it, get Ollama.app
+    from https://ollama.com (or `brew install ollama && brew services start ollama`),
+    then:
+
       ollama pull qwen3-embedding:0.6b
       recall index
 

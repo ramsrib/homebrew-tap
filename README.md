@@ -53,18 +53,26 @@ launch cleanly through Gatekeeper.
 
 ## The recall stack
 
-`recall-app` is a front end for the `recall` CLI, which embeds locally via
-[Ollama](https://ollama.com). Homebrew resolves that whole chain for you —
+`recall-app` is a front end for the `recall` CLI, so installing the app installs
+the CLI too:
 
 ```sh
-brew install --cask ramsrib/tap/recall-app   # → recall → ollama
+brew install --cask ramsrib/tap/recall-app   # → pulls in the recall formula
 ```
 
-— but Ollama still needs to be running with an embedding model pulled before
-search will work:
+`recall` embeds locally via [Ollama](https://ollama.com), which is *not* a
+Homebrew dependency on purpose: most people run Ollama.app, and forcing the
+formula would install a second copy that competes with it for port 11434. Either
+install works — if you don't have one yet, pick whichever you prefer:
 
 ```sh
-brew services start ollama
+# Ollama.app from https://ollama.com, or:
+brew install ollama && brew services start ollama
+```
+
+Then pull the embedding model and index:
+
+```sh
 ollama pull qwen3-embedding:0.6b
 recall index
 ```
