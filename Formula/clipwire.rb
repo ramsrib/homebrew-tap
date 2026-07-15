@@ -12,6 +12,13 @@ class Clipwire < Formula
     system "go", "build", *std_go_args(ldflags: "-s -w")
   end
 
+  service do
+    run [opt_bin/"clipwire", "serve"]
+    keep_alive true
+    log_path var/"log/clipwire.log"
+    error_log_path var/"log/clipwire.log"
+  end
+
   test do
     assert_match "clipwire #{version}", shell_output("#{bin}/clipwire --version")
   end
