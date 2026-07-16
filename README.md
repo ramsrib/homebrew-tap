@@ -17,6 +17,7 @@ brew install --cask folio         # Markdown notes reader
 brew install --cask recall-app    # browse + read your agent sessions (pulls in recall)
 brew install recall               # the recall CLI on its own
 brew install raven                # terminal dashboard for live Claude Code sessions
+brew install clipwire             # paste clipboard images into a remote program over SSH
 ```
 
 Or install without tapping first, using the full name:
@@ -50,6 +51,11 @@ launch cleanly through Gatekeeper.
 |---|---|---|
 | `recall` | Local-first hybrid search over your Claude Code and Codex sessions | [ramsrib/recall-cli](https://github.com/ramsrib/recall-cli) |
 | `raven` | Terminal dashboard for your local Claude Code sessions — macOS | [ramsrib/raven](https://github.com/ramsrib/raven) |
+| `clipwire` | Paste clipboard images into a program on a remote host over SSH — macOS + Linux | [ramsrib/clipwire](https://github.com/ramsrib/clipwire) |
+
+`clipwire` runs a small daemon on your laptop (`brew services start clipwire`) plus a
+bit of SSH config — see the [clipwire README](https://github.com/ramsrib/clipwire#readme)
+for setup.
 
 ## The recall stack
 
