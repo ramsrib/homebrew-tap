@@ -18,6 +18,7 @@ brew install --cask recall-app    # browse + read your agent sessions (pulls in 
 brew install recall               # the recall CLI on its own
 brew install raven                # terminal dashboard for live Claude Code sessions
 brew install clipwire             # paste clipboard images into a remote program over SSH
+brew install ccmeter              # subscription + context-window usage meters
 ```
 
 Or install without tapping first, using the full name:
@@ -52,10 +53,16 @@ launch cleanly through Gatekeeper.
 | `recall` | Local-first hybrid search over your Claude Code and Codex sessions | [ramsrib/recall-cli](https://github.com/ramsrib/recall-cli) |
 | `raven` | Terminal dashboard for your local Claude Code sessions — macOS | [ramsrib/raven](https://github.com/ramsrib/raven) |
 | `clipwire` | Paste clipboard images into a program on a remote host over SSH — macOS + Linux | [ramsrib/clipwire](https://github.com/ramsrib/clipwire) |
+| `ccmeter` | Subscription and context-window usage meters for Claude Code and Codex — installs `ccmeter` + `ctxmeter` | [ramsrib/ccmeter](https://github.com/ramsrib/ccmeter) |
 
 `clipwire` runs a small daemon on your laptop (`brew services start clipwire`) plus a
 bit of SSH config — see the [clipwire README](https://github.com/ramsrib/clipwire#readme)
 for setup.
+
+`ccmeter` is one formula that installs two commands: `ccmeter` (how much of your
+subscription is left) and `ctxmeter` (how full the current session's context
+window is). It runs on the `node` Homebrew pulls in, and prefers `bun` if you
+happen to have it.
 
 ## The recall stack
 
