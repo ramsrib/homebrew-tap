@@ -4,6 +4,11 @@ class Later < Formula
   version "0.1.0"
   license "MIT"
 
+  livecheck do
+    url "https://github.com/ramsrib/later/releases/latest"
+    strategy :github_latest
+  end
+
   on_macos do
     on_arm do
       url "https://github.com/ramsrib/later/releases/download/v#{version}/later_#{version}_darwin_arm64.tar.gz"
@@ -26,10 +31,6 @@ class Later < Formula
     end
   end
 
-  livecheck do
-    url "https://github.com/ramsrib/later/releases/latest"
-    strategy :github_latest
-  end
 
   def install
     bin.install "later"
