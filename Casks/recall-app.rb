@@ -18,7 +18,7 @@ cask "recall-app" do
   # Formula/recall.rb for why).
   depends_on formula: "ramsrib/tap/recall"
   depends_on arch: :arm64
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Recall App.app"
 
