@@ -5,7 +5,7 @@ class Later < Formula
   license "MIT"
 
   livecheck do
-    url "https://github.com/ramsrib/later/releases/latest"
+    url :stable
     strategy :github_latest
   end
 
@@ -30,7 +30,6 @@ class Later < Formula
       sha256 "28780d019c9176e78908bea0dff9b7be086f2e0249984e180b1dd567240f3667"
     end
   end
-
 
   def install
     bin.install "later"
