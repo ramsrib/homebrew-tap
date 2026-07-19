@@ -22,7 +22,7 @@ cask "abra" do
                                     "https://github.com/ramsrib/abra", engine],
                      print_stderr: false
       system_command "/bin/sh",
-                     args:         ["-c", "cd #{engine} && uv sync"],
+                     args:         ["-c", "cd #{engine} && #{HOMEBREW_PREFIX}/bin/uv sync"],
                      print_stderr: false
     end
   end
