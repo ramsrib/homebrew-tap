@@ -33,7 +33,9 @@ cask "abra" do
     First launch downloads the speech model (~700MB) — the menu bar icon
     shows an hourglass while it loads.
 
-    Not yet notarized: on first open, right-click Abra.app → Open.
+    Not yet notarized — macOS will block the first launch. Click "Done"
+    (not "Move to Trash"), then: System Settings → Privacy & Security →
+    scroll down → "abra" was blocked → Open Anyway → relaunch.
 
     The engine lives in ~/.abra/engine (cloned on install). To update it:
       cd ~/.abra/engine && git pull && uv sync
