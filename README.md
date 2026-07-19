@@ -19,6 +19,7 @@ brew install recall               # the recall CLI on its own
 brew install raven                # terminal dashboard for live Claude Code sessions
 brew install clipwire             # paste clipboard images into a remote program over SSH
 brew install ccmeter              # subscription + context-window usage meters
+brew install later                # remind a future agent session about something
 ```
 
 Or install without tapping first, using the full name:
@@ -54,6 +55,7 @@ launch cleanly through Gatekeeper.
 | `raven` | Terminal dashboard for your local Claude Code sessions — macOS | [ramsrib/raven](https://github.com/ramsrib/raven) |
 | `clipwire` | Paste clipboard images into a program on a remote host over SSH — macOS + Linux | [ramsrib/clipwire](https://github.com/ramsrib/clipwire) |
 | `ccmeter` | Subscription and context-window usage meters for Claude Code and Codex — installs `ccmeter` + `ctxmeter` | [ramsrib/ccmeter](https://github.com/ramsrib/ccmeter) |
+| `later` | Durable local reminder queue for coding-agent sessions — macOS + Linux | [ramsrib/later](https://github.com/ramsrib/later) |
 
 `clipwire` runs a small daemon on your laptop (`brew services start clipwire`) plus a
 bit of SSH config — see the [clipwire README](https://github.com/ramsrib/clipwire#readme)
