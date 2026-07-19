@@ -7,7 +7,7 @@ cask "abra" do
   desc "Local push-to-talk dictation for macOS — hold Fn, speak, release"
   homepage "https://github.com/ramsrib/abra"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
   depends_on arch: :arm64
   depends_on formula: "uv"
   depends_on formula: "ffmpeg"
@@ -18,14 +18,16 @@ cask "abra" do
     engine = File.expand_path("~/.abra/engine")
     unless File.exist?(File.join(engine, "pyproject.toml"))
       system_command "/usr/bin/git",
-                     args: ["clone", "--depth", "1",
-                            "https://github.com/ramsrib/abra", engine],
+                     args:         ["clone", "--depth", "1",
+                                    "https://github.com/ramsrib/abra", engine],
                      print_stderr: false
       system_command "/bin/sh",
-                     args: ["-c", "cd #{engine} && uv sync"],
+                     args:         ["-c", "cd #{engine} && uv sync"],
                      print_stderr: false
     end
   end
+
+  zap trash: "~/.abra"
 
   caveats <<~EOS
     First launch downloads the speech model (~700MB) — the menu bar icon
@@ -36,8 +38,4 @@ cask "abra" do
     The engine lives in ~/.abra/engine (cloned on install). To update it:
       cd ~/.abra/engine && git pull && uv sync
   EOS
-
-  zap trash: [
-    "~/.abra",
-  ]
 end
