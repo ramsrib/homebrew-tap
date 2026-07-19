@@ -16,17 +16,19 @@ cask "abra" do
 
   postflight do
     engine = File.expand_path("~/.abra/engine")
+    # The engine is pinned to this release's tag — never a moving branch, so
+    # a broken main can't affect installs or upgrades.
     if File.exist?(File.join(engine, "pyproject.toml"))
-      # Upgrade: refresh the engine to match the app (best-effort — a locally
-      # modified engine is left alone rather than failing the install).
       refresh = "cd #{engine} && " \
-                "(/usr/bin/git pull --ff-only && #{HOMEBREW_PREFIX}/bin/uv sync) || true"
+                "(/usr/bin/git fetch --depth 1 origin tag v#{version} && " \
+                "/usr/bin/git checkout -q v#{version} && " \
+                "#{HOMEBREW_PREFIX}/bin/uv sync) || true"
       system_command "/bin/sh",
                      args:         ["-c", refresh],
                      print_stderr: false
     else
       system_command "/usr/bin/git",
-                     args:         ["clone", "--depth", "1",
+                     args:         ["clone", "--depth", "1", "--branch", "v#{version}",
                                     "https://github.com/ramsrib/abra", engine],
                      print_stderr: false
       system_command "/bin/sh",
@@ -41,7 +43,7 @@ cask "abra" do
     First launch downloads the speech model (~700MB) — the menu bar icon
     shows an hourglass while it loads.
 
-    The engine lives in ~/.abra/engine (cloned on install). To update it:
-      cd ~/.abra/engine && git pull && uv sync
+    The engine lives in ~/.abra/engine, pinned to this release's tag and
+    updated automatically on brew upgrade.
   EOS
 end
