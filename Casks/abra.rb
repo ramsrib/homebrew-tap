@@ -4,7 +4,7 @@ cask "abra" do
 
   url "https://github.com/ramsrib/abra/releases/download/v#{version}/Abra-#{version}.zip"
   name "abra"
-  desc "Local push-to-talk dictation for macOS — hold Fn, speak, release"
+  desc "Local push-to-talk dictation — hold Fn, speak, release"
   homepage "https://github.com/ramsrib/abra"
 
   depends_on macos: :ventura
