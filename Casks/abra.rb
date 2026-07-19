@@ -19,9 +19,10 @@ cask "abra" do
     if File.exist?(File.join(engine, "pyproject.toml"))
       # Upgrade: refresh the engine to match the app (best-effort — a locally
       # modified engine is left alone rather than failing the install).
+      refresh = "cd #{engine} && " \
+                "(/usr/bin/git pull --ff-only && #{HOMEBREW_PREFIX}/bin/uv sync) || true"
       system_command "/bin/sh",
-                     args:         ["-c",
-                                    "cd #{engine} && (/usr/bin/git pull --ff-only && #{HOMEBREW_PREFIX}/bin/uv sync) || true"],
+                     args:         ["-c", refresh],
                      print_stderr: false
     else
       system_command "/usr/bin/git",
