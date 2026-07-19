@@ -2,7 +2,7 @@ cask "abra" do
   version "0.2.2"
   sha256 "536526c96c559728d3e149618119fe2ecef67117b1ac3c82dfe09b126fbcc3b0"
 
-  url "https://github.com/ramsrib/abra/releases/download/v#{version}/Abra-#{version}.zip"
+  url "https://github.com/ramsrib/abra/releases/download/v#{version}/Abra-#{version}-darwin-arm64.zip"
   name "abra"
   desc "Local push-to-talk dictation — hold Fn, speak, release"
   homepage "https://github.com/ramsrib/abra"
