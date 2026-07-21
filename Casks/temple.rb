@@ -1,6 +1,6 @@
 cask "temple" do
-  version "0.1.6"
-  sha256 "5222b3aa443af584fb9615f7d2fbffd1d52f963ff910639de6a6f89c7699bcec"
+  version "0.1.7"
+  sha256 "fbe912926180db67aeed9d662eca051de8aa2c7a39f832ecffaa8b5a24081826"
 
   url "https://github.com/ramsrib/temple/releases/download/v#{version}/Temple-v#{version}-arm64.dmg"
   name "Temple"
