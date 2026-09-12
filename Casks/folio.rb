@@ -1,6 +1,6 @@
 cask "folio" do
-  version "0.4.1"
-  sha256 "b740baad782f9235559dcb4232e07249f2059c9704839ff460569abafd574955"
+  version "0.5.0"
+  sha256 "d5038e3c2bec278014c252530af8a60987e6fc2530e7e3dd7ea05855707064f9"
 
   url "https://github.com/ramsrib/folio/releases/download/v#{version}/Folio-v#{version}-arm64.dmg"
   name "Folio"
@@ -28,8 +28,8 @@ cask "folio" do
     Folio opens a folder of Markdown files as a vault — your files stay where
     they are, on disk, and Folio never moves or rewrites them behind your back.
 
-    It is early software: macOS is the built target, and there is no test suite
-    yet. See the repo's Limitations section before trusting it with a vault you
-    cannot afford to lose.
+    It is early software: macOS is the built target, and the tests cover the
+    parser and the store rather than the UI. See the repo's Limitations section
+    before trusting it with a vault you cannot afford to lose.
   EOS
 end
