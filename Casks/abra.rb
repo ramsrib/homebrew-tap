@@ -1,16 +1,16 @@
 cask "abra" do
-  version "0.2.6"
-  sha256 "93af223872f98e8aee65daccbc8c1428465fd9552ef0bf27de89200b329a6e49"
+  version "0.2.7"
+  sha256 "51ccef6ef0a1ca283a33bf772efb2d5043e8409854e40a814c7aadc051c9842d"
 
   url "https://github.com/ramsrib/abra/releases/download/v#{version}/Abra-#{version}-darwin-arm64.zip"
   name "abra"
   desc "Local push-to-talk dictation — hold Fn, speak, release"
   homepage "https://github.com/ramsrib/abra"
 
-  depends_on macos: :ventura
   depends_on arch: :arm64
-  depends_on formula: "uv"
   depends_on formula: "ffmpeg"
+  depends_on formula: "uv"
+  depends_on macos: :ventura
 
   app "Abra.app"
 
