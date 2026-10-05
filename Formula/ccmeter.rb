@@ -1,8 +1,8 @@
 class Ccmeter < Formula
   desc "Subscription usage, context-window and spend-attribution tools for Claude Code and Codex"
   homepage "https://github.com/ramsrib/ccmeter"
-  url "https://github.com/ramsrib/ccmeter/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "cb2160e5b680011a44d3aad35cc8cc030a4f21bf58c239c328f4600974b06642"
+  url "https://github.com/ramsrib/ccmeter/archive/refs/tags/v0.2.1.tar.gz"
+  sha256 "dddcd2fd59eef579382672cde284fa621a4cf24b18cc68ab8925b9779849156f"
   license "MIT"
   head "https://github.com/ramsrib/ccmeter.git", branch: "main"
 
