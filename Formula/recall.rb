@@ -1,7 +1,7 @@
 class Recall < Formula
   desc "Local-first hybrid search over your Claude Code and Codex sessions"
   homepage "https://github.com/ramsrib/recall-cli"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   # Ollama is deliberately NOT a depends_on. Most people run it as Ollama.app
@@ -12,22 +12,22 @@ class Recall < Formula
   on_macos do
     on_arm do
       url "https://github.com/ramsrib/recall-cli/releases/download/v#{version}/recall_#{version}_darwin_arm64.tar.gz"
-      sha256 "70c2b80d3850bf36237029fead4fc7c3c8c130d1690892fbc857a3bc2f1349fa"
+      sha256 "fc91862202ca32d5176faebd2e27cb4b23bf5cda12ed9549f55ea86208b5ef66"
     end
     on_intel do
       url "https://github.com/ramsrib/recall-cli/releases/download/v#{version}/recall_#{version}_darwin_amd64.tar.gz"
-      sha256 "2d70391c69be998fe693d2e3c8e57f4d4f4f3968dd37714b5df6674ed4517be2"
+      sha256 "cb2a42692581146d0665ce56caa22b73960090b122727be3023dfe5a3762ae38"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/ramsrib/recall-cli/releases/download/v#{version}/recall_#{version}_linux_arm64.tar.gz"
-      sha256 "bcb51227554b65d27534be853b8139d4177cc4a493ab35be373de12a0cb54222"
+      sha256 "2ee1424bf8d55077235682f804ce95d4a9817cb34eccc2c4aad1ba9a530115e7"
     end
     on_intel do
       url "https://github.com/ramsrib/recall-cli/releases/download/v#{version}/recall_#{version}_linux_amd64.tar.gz"
-      sha256 "0529c106cab29ed11341ec85cf63fe1eb58be3d6d5c3cd19179ad1cb7e4d40f1"
+      sha256 "3b3ea7a7b22140573e903cc5ecff34cf17edc8c90becf2f1952060725f333cb0"
     end
   end
 
