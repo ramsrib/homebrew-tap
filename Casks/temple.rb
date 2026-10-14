@@ -1,6 +1,6 @@
 cask "temple" do
-  version "0.4.0"
-  sha256 "68717d26442c75833dabcb3d2d16b3c200d9b217aadf5fd35a36578c74854603"
+  version "0.4.1"
+  sha256 "9f2f92739aa7e5760c90d4965ec5e0442b46ab60df36eecb990036653932a82a"
 
   url "https://github.com/ramsrib/temple/releases/download/v#{version}/Temple-v#{version}-arm64.dmg"
   name "Temple"
@@ -16,6 +16,7 @@ cask "temple" do
   depends_on macos: :sonoma
 
   app "Temple.app"
+  binary "#{appdir}/Temple.app/Contents/Helpers/temple"
 
   zap trash: [
     "~/Library/Application Support/Temple",
