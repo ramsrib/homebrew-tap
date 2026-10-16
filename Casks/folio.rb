@@ -1,6 +1,6 @@
 cask "folio" do
-  version "0.5.0"
-  sha256 "d5038e3c2bec278014c252530af8a60987e6fc2530e7e3dd7ea05855707064f9"
+  version "0.5.1"
+  sha256 "a19b54de2853fabc87d06d4a2c81b43a57d978a1e1516050e14350752359a741"
 
   url "https://github.com/ramsrib/folio/releases/download/v#{version}/Folio-v#{version}-arm64.dmg"
   name "Folio"
