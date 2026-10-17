@@ -1,6 +1,6 @@
 cask "abra" do
-  version "0.2.7"
-  sha256 "51ccef6ef0a1ca283a33bf772efb2d5043e8409854e40a814c7aadc051c9842d"
+  version "0.2.8"
+  sha256 "9b0a82af70adc7efef903588ca4a2b46108d5a8f4b414e0b4a261d7092cd03d9"
 
   url "https://github.com/ramsrib/abra/releases/download/v#{version}/Abra-#{version}-darwin-arm64.zip"
   name "abra"
