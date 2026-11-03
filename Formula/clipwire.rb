@@ -1,8 +1,8 @@
 class Clipwire < Formula
   desc "Paste clipboard images into a program on a remote host over SSH"
   homepage "https://github.com/ramsrib/clipwire"
-  url "https://github.com/ramsrib/clipwire/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "7bf8b36376613d2b4d4272add737245df9667589377c7c26c09e539fa64942d1"
+  url "https://github.com/ramsrib/clipwire/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "69fea5723065e3e6ee5de29eb2f6671c9e3e38afe0be9942c50a7c0342f8e79c"
   license "MIT"
   head "https://github.com/ramsrib/clipwire.git", branch: "main"
 
