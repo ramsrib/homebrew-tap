@@ -1,7 +1,7 @@
 class Later < Formula
   desc "Leave a reminder for a future Claude Code or Codex session in this project"
   homepage "https://github.com/ramsrib/later"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   livecheck do
@@ -12,22 +12,22 @@ class Later < Formula
   on_macos do
     on_arm do
       url "https://github.com/ramsrib/later/releases/download/v#{version}/later_#{version}_darwin_arm64.tar.gz"
-      sha256 "b22beda613e4b74c0996265747d740c6f4c78bd2f6c42afb8c0f5d105f17405d"
+      sha256 "1db92d362ebe9b8fcfa10c4dabd5f56cd8003b5da79d98ab9496bfe7ecdb43a0"
     end
     on_intel do
       url "https://github.com/ramsrib/later/releases/download/v#{version}/later_#{version}_darwin_amd64.tar.gz"
-      sha256 "4c945481c72a89f125e0b19e11443337c228359d6206df0898a8516a4fa467e4"
+      sha256 "1488d51400e331e42463224507b27b25078b782f21a42b21bf5c07099af07bff"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/ramsrib/later/releases/download/v#{version}/later_#{version}_linux_arm64.tar.gz"
-      sha256 "e71f73806ae272e155482d43570f3a0298c745241fb60d9559213a65683b9f19"
+      sha256 "ebccb4a7f759d00736ca65beeaa16c5b6864c3c1f2b54c5cff892d80d241178e"
     end
     on_intel do
       url "https://github.com/ramsrib/later/releases/download/v#{version}/later_#{version}_linux_amd64.tar.gz"
-      sha256 "039614253baac61f668d06a7f0829352d678651a63ca67241c0c1b9704474b61"
+      sha256 "7d2ae0692eaa4eecae3850c79cd3121faaafc62d52c66d1432d377638aa80d94"
     end
   end
 
