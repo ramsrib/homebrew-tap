@@ -1,8 +1,8 @@
 class Ccmeter < Formula
   desc "Subscription usage, context-window and spend-attribution tools for Claude Code, Codex and Gemini"
   homepage "https://github.com/ramsrib/ccmeter"
-  url "https://github.com/ramsrib/ccmeter/archive/refs/tags/v0.2.12.tar.gz"
-  sha256 "083a399687a05fbb80f102208d9be26e7518c70f1518a572fde7465db9577894"
+  url "https://github.com/ramsrib/ccmeter/archive/refs/tags/v0.2.13.tar.gz"
+  sha256 "b56b2f81703a24e6bf216702a0568061d7aea14b87b5ec81ba90e944bb1fcfa4"
   license "MIT"
   head "https://github.com/ramsrib/ccmeter.git", branch: "main"
 
@@ -35,5 +35,6 @@ class Ccmeter < Formula
     assert_match "context-window usage", shell_output("#{bin}/ctxmeter --help")
     assert_match "subscription usage", shell_output("#{bin}/ccmeter --help")
     assert_match "usage went", shell_output("#{bin}/ccburn --help")
+    assert_match version.to_s, shell_output("#{bin}/ccmeter --version")
   end
 end
