@@ -1,8 +1,8 @@
 class Ccmeter < Formula
-  desc "Subscription usage, context-window and spend-attribution tools for Claude Code and Codex"
+  desc "Subscription usage, context-window and spend-attribution tools for Claude Code, Codex and Gemini"
   homepage "https://github.com/ramsrib/ccmeter"
-  url "https://github.com/ramsrib/ccmeter/archive/refs/tags/v0.2.9.tar.gz"
-  sha256 "2e3d385b3c32eab53e63e3bddc8432aac905cffc5783f39b9a7abd57a4313a69"
+  url "https://github.com/ramsrib/ccmeter/archive/refs/tags/v0.2.10.tar.gz"
+  sha256 "85d4988bac384fbd8b4ebbf25f49c57c527af5b40b760b2a24d9cd644c3c8420"
   license "MIT"
   head "https://github.com/ramsrib/ccmeter.git", branch: "main"
 
@@ -26,7 +26,8 @@ class Ccmeter < Formula
       ccmeter reads your Claude Code OAuth token from the macOS Keychain, so the
       first run may prompt for Keychain access. Each run appends its readings to
       ~/.local/state/ccmeter/history.jsonl (CCMETER_NO_HISTORY=1 turns it off),
-      which ccburn reads. ctxmeter and ccburn need no credentials.
+      which ccburn reads. ctxmeter and ccburn need no credentials. Gemini usage
+      shows only where the Antigravity CLI (agy) is installed and logged in.
     EOS
   end
 
